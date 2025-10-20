@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Politique de protection des données personnelles</title>
+  <link rel="icon" type="image/png" href="logo.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Almarai:wght@400;700&family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    /* Police par défaut (FR et EN) */
+body {
+  font-family: "Montserrat";
+  line-height: 1.6;
+  margin: 0;
+  background-color: transparent;
+  color: #333;
+}
+
+/* Police spéciale pour l'arabe */
+html[lang="ar"] body,
+body[lang="ar"] {
+  font-family: "Almarai";
+}
+
+/* Navbar */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 70px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center; 
+  background-color: #004987;
+  padding: 0 20px;
+  box-sizing: border-box;
+  z-index: 1000;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.brand img {
+  height: 50px;
+  width: auto;
+}
+
+.nav-title {
+  font-size: 1.2rem;
+  color: #ffffff;
+  margin: 0;
+  padding: 0;
+}
+
+.selectLang select {
+  width: 100px;
+  height: 30px;
+  background-color: #004987;
+  border-radius: 5px;
+  color: #fff;
+  border: none;
+  padding: 3px;
+  cursor: pointer;
+}
+
+h2 {
+  font-size: 1.2rem;
+  color: #004987;
+  margin-bottom: 10px;
+}
+
+[dir="ltr"] h2 { text-align: left; }
+[dir="rtl"] h2 { text-align: right; }
+
+.paragraphes {
+  margin-top: 110px;
+}
+
+.parag {
+  background: #f3f3f3;
+  padding: 15px 20px;
+  margin: 30px;
+  margin-bottom: 20px;
+  border-left: 5px solid #004987;
+  border-bottom: 5px solid #004987;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+[dir="rtl"] .parag {
+  background: #eff0f5;
+  border-left: none;
+  border-right: 5px solid #004987;
+}
+
+.parag ul {
+  list-style-type: disc;
+  margin-left: 30px;
+}
+
+[dir="rtl"] .parag ul {
+  margin-left: 0;
+  margin-right: 30px;
+}
+
+[dir="ltr"] .parag p, [dir="ltr"] .parag ul li {
+  font-size: 1.3rem;
+  text-align: left;
+  color: black;
+}
+
+[dir="rtl"] .parag p, [dir="rtl"] .parag ul li {
+  font-size: 1.3rem;
+  text-align: right;
+  color: black;
+}
+
+@media (max-width: 600px) {
+  .nav-title { font-size: 0.8rem; }
+  .selectLang select { width: 80px; font-size: 0.9rem; }
+  .paragraphes { margin-top: 150px; }
+  [dir="ltr"] .parag p, [dir="ltr"] .parag ul li,
+  [dir="rtl"] .parag p, [dir="rtl"] .parag ul li { font-size: 0.9rem;}
+}
+
+/* --- FOOTER --- */
+.footer {
+  background-color: #004987;
+  color: #ffffff;
+  margin-top: 50px;
+  padding: 30px 20px 15px 20px;
+  font-size: 0.95rem;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center; 
+  margin: auto;  
+  padding: 0 30px;   
+  margin-left: 90px;
+} 
+
+
+
+[dir="rtl"] .footer-container { 
+  padding-right: 200px;
+} 
+@media (max-width: 430px) {
+  [dir="rtl"] .footer-container { 
+  padding-right: 20px;
+} 
+}
+
+@media (max-width: 800px) {
+  [dir="rtl"] .footer-container { 
+  padding-right: 20px;
+} 
+}
+
+.footer-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;  
+  margin-top: 0px;
+  margin-left: 20px;  
+}
+.footer-logo img {
+  height: 100px;
+  width: auto; 
+}
+
+
+
+.footer-contact { 
+  text-align: center;
+  margin-top: 20px; 
+
+}
+[dir="rtl"] .footer-contact { 
+  text-align: center;
+  margin-top: 20px;
+  margin-left: 0px;
+}
+
+.footer-contact p {  
+  margin-top: 10px;
+  font-size: 16px;
+}  
+
+.footer-contact p a {
+  margin: 5px 0;
+  color: #fff; 
+  font-size: 16px;
+  text-decoration: none;
+}
+
+
+
+.social-tel {
+  display: flex;
+  flex-direction: column; /* icônes en haut, tel en bas */
+  align-items: center;    
+  gap: 15px;              
+  margin-top: 10px;
+  margin-right: 20px; /* espace droite */
+}
+.footer-social {
+  display: flex;
+  gap: 15px;   
+}
+
+.footer-social img {
+  width: 35px;
+  height: 35px;
+  filter: brightness(0) saturate(100%) invert(97%) sepia(3%) saturate(16%) hue-rotate(324deg) brightness(93%) contrast(87%); /* #f3f3f3 */
+  transition: transform 0.3s ease;  
+}
+
+.footer-social img:hover {
+  transform: scale(1.2);
+}
+.tel a img {
+  display: block;
+  margin: 0 auto; /* centré */
+}
+
+/* Ligne bas footer */
+.footer-bottom {
+  text-align: center;
+  margin-top: 20px;
+  border-top: 1px solid rgba(255,255,255,0.3);
+  padding-top: 10px;
+  font-size: 0.85rem;
+}
+
+
+@media (max-width: 1134px) {
+ 
+.footer-logo { 
+  margin-left: 60px;  
+}
+}
+
+
+
+
+@media (max-width: 1048px) {
+ 
+.footer-logo { 
+  margin-right: 8px;  
+}
+[dir="rtl"] .footer-container { 
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center; 
+  margin: auto;  
+  padding: 0 10px;   
+  margin-left: 9px; 
+}
+}
+
+@media (max-width: 898px) {
+ 
+[dir="rtl"]  .footer-logo { 
+  margin-left: 40px;  
+}
+[dir="rtl"] .footer-container { 
+  padding-right: 10px;
+}
+}
+
+
+
+
+
+@media (max-width: 912px) {
+ 
+.footer-logo { 
+  margin-left: 10px;  
+} 
+[dir="rtl"]  .footer-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 0;
+    margin-left: 8px; 
+  }
+}
+@media (max-width: 853px) {
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 0;
+    margin-left: 8px;
+  }
+   
+  
+}
+ .footer-contact{ margin-left: 10px;}
+  .footer-logo {
+    margin-left: 0;
+  }
+
+  .social-tel {
+    margin-right: 0;
+  }
+
+  .footer-social {
+    justify-content: center;
+  }
+
+
+  </style>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="brand">
+      <img src="logo.png" alt="Logo">
+      <h1 class="nav-title">Politique de protection des données personnelles</h1>
+    </div>
+    <div class="selectLang">
+      <select id="langSelect">
+        <option value="fr">Français</option>
+        <option value="en">English</option>
+        <option value="ar">العربية</option>
+      </select>
+    </div>
+  </nav>
+
+  <div class="paragraphes" id="content"></div>
+
+  <script>
+     
+    const traductions = {
+      fr: {
+        dir: "ltr",
+        title: "Politique de protection des données à cractère personnel",
+        section1: { 
+          h21: "1. Introduction", h22:"2. Responsable du traitement ", h23:"3. Champ d’Application",
+          h24:"4. Données collectées ", h25:"5. Finalités du traitement", h26:"6. Droits des personnes concernées ",
+          h27:"7. Durée de conservation", h28:"8. Sécurité des données", 
+          h29:"9. Révision " 
+        },
+        section2: {
+          parag1:"La société des Eaux et de l’Assainissement d’Alger, désigné ci-après par « SEAAL », attache une importance particulière à la protection des données à caractère personnel de ses usagers, clients, visiteurs de son site web et de ses plateformes en ligne",
+          parag11:"SEAAL s’engage à traiter les données collectées dans le strict respect des dispositions de la loi n° 18-07 du 10 juin 2018, modifiée et complétée par la loi n° 25-11 du 24 juillet 2025, relatives à la protection des personnes physiques dans le traitement des données à caractère personnel.",
+          parag12:"La présente politique a pour objet d’informer toute personne concernée de la nature des données traitées, des finalités poursuivies, des droits garantis ainsi que des modalités d’exercice de ces droits.",
+
+          parag2:"Le responsable du traitement des données à caractère personnel est : SEAAL, dont le siège social est sis au 97, Parc Ben Omar, BP 16050, Kouba – Alger, Algérie.",
+          parag21:"SEAAL a désigné un Délégué à la Protection des Données (DPO) chargé de veiller à la conformité des traitements et à la protection des droits des personnes concernées.",
+          parag221:"Mail : dpo@seaal.dz",
+          parag222:"Tél : +213 21 98 66 90",
+
+          parag3:"Cette politique s’applique à l’ensemble des activités la Société des Eaux et d’Assainissement d’Alger et Tipasa (SEAAL) impliquant le traitement des données personnelles, qu’il s’agisse des employés, des usagers, des partenaires ou tout tiers dont les données sont collectées.",
+          
+          parag4:"Dans le cadre de ses activités et des services mis à disposition via son site web et son application mobile, SEAAL peut collecter les catégories suivantes de données à caractère personnel :",
+          parag41:"Informations d’identité : nom, prénom, code client, code du contrat, date et lieu de naissance, Numéro d’Identification National (NIN), Numéro d’Identification Statistique (NIS) pour les clients institutionnels et professionnels, coordonnées bancaires.",
+          parag42:"Coordonnées de contact : adresse postale, numéro de téléphone, adresse électronique, coordonnées géographiques.",
+          parag43:"Données de connexion et de navigation : adresse IP, identifiants de connexion, cookies et traceurs nécessaires au fonctionnement et à l’amélioration du site.",
+          parag44:"Données transmises volontairement par les usagers dans le cadre des services en ligne : formulaires de réclamation, demandes diverses, photos, documents justificatifs.",
+          parag45:"La collecte est limitée aux données strictement nécessaires à la réalisation des finalités exposées ci-après.",
+
+          parag5:"Les données collectées sont traitées exclusivement pour les finalités suivantes :",
+          parag51:"L’inscription et l’utilisation des services en ligne et de l’application mobile de SEAAL.",
+          parag52:"La gestion des contrats, de la facturation, de la consommation et des réclamations.",
+          parag53:"La communication avec les usagers par courrier, téléphone, SMS, e-mail ou notifications.",
+          parag54:"L’organisation de campagnes d’information et de sensibilisation.",
+          parag55:"La réalisation d’interventions techniques et commerciales.",
+          parag56:"Le suivi technique de la navigation et l’amélioration de l’expérience utilisateur.",
+          parag57:"Tous les traitements sont réalisés par SEAAL sur le territoire Algérien. Aucune donnée à caractère personnel n’est transférée à l’étranger ni transmise à des tiers.",
+          
+          parag6:"Conformément aux dispositions légales en vigueur, toute personne concernée bénéficie des droits suivants :",
+          parag61:"Droit à l’information,",
+          parag62:"Droit d’accès,",
+          parag63:"Droit de rectification,",
+          parag64:"Droit d’opposition,",
+          parag65:"Droit à l’effacement (sous conditions).",
+          parag66:"Ces droits peuvent être exercés en contactant le DPO de SEAAL par e-mail (dpo@seaal.dz), par téléphone (1594) ou par courrier adressé au siège social : 97, Parc Ben Omar, BP 16050, Kouba – Alger.",
+
+          parag7:"Les données à caractère personnel sont conservées uniquement pour la durée strictement nécessaire à la réalisation des finalités pour lesquelles elles ont été collectées, conformément aux prescriptions légales et réglementaires applicables.",
+          
+          parag8:"SEAAL met en œuvre l’ensemble des mesures organisationnelles et techniques appropriées pour assurer la confidentialité, l’intégrité et la disponibilité des données à caractère personnel traitées.",
+
+          parag9:"SEAAL se réserve le droit d’adapter la présente politique en fonction de l’évolution de la réglementation nationale en matière de protection des données et de ses activités.",
+          parag91:"La date de la dernière mise à jour est indiquée en en-tête de ce document.",
+          footerLieux: "Parc Ben Omar Kouba, Alger",
+          footerDroit: " SEAAL. Tous droits réservés."
+        }
+      },
+
+      en: {
+        dir: "ltr",
+        title:"Personal data protection policy",
+        section1: { 
+          h21:"1. Introduction", h22:"2. Data controller", h23:"3. Scope Of Application",
+          h24:"4. Collected Data", h25:"5. Processing Purpose", h26:"6. Rights of Data Subjets",
+          h27:"7. Retention period", h28:"8. Data security", h29:"9. Revision " 
+        },
+        section2: {
+          parag1:"The Algiers Water and Sanitation Company, hereinafter referred to as ‘SEAAL’, attaches particular importance to the protection of the personal data of its users, customers, and visitors to its website and online platforms. ",
+          parag11:"SEAAL undertakes to process the data collected in strict compliance with the provisions of Law No. 18-07 of 10 June 2018, amended and supplemented by Law No. 25-11 of 24 July 2025, relating to the protection of individuals with regard to the processing of personal data.",
+          parag12:"The purpose of this policy is to inform all data subjects of the nature of the data processed, the purposes pursued, the rights guaranteed and the procedures for exercising those rights.",
+
+          parag2:"The controller of personal data is: SEAAL, whose registered office is located at 97, Parc Ben Omar, BP 16050, Kouba – Algiers, Algeria",
+          parag21:"SEAAL has appointed a Data Protection Officer (DPO) responsible for ensuring compliance with data processing and protecting the rights of data subjects.",
+          parag221:"Mail : dpo@seaal.dz",
+          parag222:"Phone : +213 21 98 66 90",
+
+          parag3:"This policy applies to all activities of the Algiers Water And Sanitation Company of Algiers and Tipaza (SEAAL) involving the processing of personal data, whether of employees, users, partners or any third parties whose data is collected.",
+          
+          parag4:"As part of its activities and the services made available via its website and mobile application, SEAAL may collect the following categories of personal data:",
+          parag41:"Identity information: surname, first name, customer code, contract code, date and place of birth, National Identification Number (NIN), Statistical Identification Number (NIS) for institutional and professional customers, bank details.",
+          parag42:"Contact details: postal address, phone number, email address, geographical coordinates.",
+          parag43:"Connection and browsing data: IP address, login details, cookies and trackers necessary for the functioning and improvement of the website.",
+          parag44:"Data voluntarily provided by users in the context of online services: complaint forms, various requests, photos, supporting documents. ",
+          parag45:"The collection is limited to data strictly necessary for the purposes set out below.",
+          
+          parag5:"The data collected is processed exclusively for the following purposes:",
+          parag51:"Registration and use of SEAAL’s online services and mobile application.",
+          parag52:"Management of contracts, invoicing, consumption and complaints.",
+          parag53:"Communication with users by post, phone, text message, e-mail or notification.",
+          parag54:"Organising information and awarness campaigns.",
+          parag55:"Carrying out technical and commercial interventions.",
+          parag56:"Technical monitoring of navigation and improvement of the user experience.",
+          parag57:"All processing is carried out by SEAAL within Algeria. No personal data is transferred abroad or disclosed to third parties.",
+          
+          parag6:"In accordance with the legal provisions in force, all data subjects have the following rights:",
+          parag61:"Right to information.",
+          parag62:"Right to access.",
+          parag63:"Right to rectification.",
+          parag64:"Right of objection.",
+          parag65:"Right to erasure (under conditions).",
+          parag66:"These rights may be exercised by contacting SEAAL's DPO by email (dpo@seaal.dz), by telephone (1594) or by post addressed to the registered office: 97, Parc Ben Omar, BP 16050, Kouba – Algiers.",
+
+          parag7:"Personal data is retained only for the period strictly necessary to fulfil the purposes for which it was collected, in accordance with applicable legal and regulatory requirements.",
+          
+          parag8:"SEAAL implements all appropriate organisational and technical measures to ensure the confidentiality, integrity and availability of the personal data processed.",
+
+          parag9:"SEAAL reserves the right to adapt this policy in line with changes in national data protection regulations and its activities.",
+          parag91:"The date of the last update is indicated at the top of this document.",
+          
+           
+          footerLieux: "Parc Ben Omar Kouba, Algiers.",
+          footerDroit: " SEAAL. All rights reserved."
+        }
+      },
+
+      ar: {
+        dir:"rtl",
+        title:"سياسة حماية البيانات الشخصية",
+        section1: { 
+          h21:"1. مقدمة ", h22:"2. المسؤول عن المعالجة", h23:"3. نطاق التطبيق",
+          h24:"4. البيانات المجمعة", h25:"5. أغراض المعالجة", h26:"6. حقوق الأشخاص المعنيين",
+          h27:"7.	مدة الاحتفاظ بالبيانات", h28:"8. أمن البيانات", h29:"9. المراجعة" 
+        },
+        section2: {
+          parag1:"تولي شركة المياه والتطهير للجزائر، المشار إليها بـ 'سيال'، أهمية خاصة لحماية البيانات ذات الطابع الشخصي لمستخدميها، وزبائنها، وزوار موقعها الإلكتروني ومنصاتها الرقمية.",
+          parag11:"تلتزم 'سيال' بمعالجة البيانات المجمعة في إطار الاحترام الصارم لأحكام القانون رقم 18-07 المؤرخ في 10 جوان 2018، المعدل والمتمم بالقانون رقم 25-11 المؤرخ في 24 يوليو 2025، المتعلق بحماية الأشخاص الطبيعيين في مجال معالجة البيانات ذات الطابع الشخصي.",
+          parag12:"تهدف هذه السياسة إلى إعلام كل شخص معني بطبيعة البيانات المعالجة، والأغراض المرجوة منها، والحقوق المضمونة، وكذلك كيفيات ممارسة هذه الحقوق.",
+          
+          parag2:"المسؤول عن معالجة البيانات ذات الطابع الشخصي هو: شركة 'سيال'، التي يقع مقرها الاجتماعي في 97، حديقة بن عمر، ص.ب 16050، القبة – الجزائر العاصمة، الجزائر.",
+          parag21:"قامت 'سيال' بتعيين مندوب لحماية البيانات (DPO) مكلف بالسهر على مطابقة عمليات المعالجة وحماية حقوق الأشخاص المعنيين.",
+          parag221:"البريد الإلكتروني: dpo@seaal.dz",
+          parag222: "<span dir='rtl'>الهاتف: ‎+213 21 98 66 90</span>",
+
+
+          parag3:"تطبق هذه السياسة على جميع أنشطة شركة المياه والتطهير للجزائر (سيال) في ولايتي الجزائر وتيبازة والتي تضم معالجة البيانات الشخصية، سواء كانت تخص العمال، المستهلكين، الزبائن، الموردين، الشركاء، أو أي طرف ثالث يتم جمع بياناته.",
+          parag4:"في إطار أنشطتها والخدمات المتاحة عبر موقعها الإلكتروني وتطبيقها المحمول، قد تقوم )سيال (بجمع الفئات التالية من البيانات ذات الطابع الشخصي:",
+          parag41:"معلومات الهوية: اللقب، الاسم، رمز الزبون، رمز العقد، تاريخ ومكان الميلاد، رقم التعريف الوطني (NIN)، رقم التعريف الإحصائي (NIS) للزبائن المؤسساتيين والمهنيين، والبيانات البنكية.",
+          parag42:"معلومات الاتصال: العنوان البريدي، رقم الهاتف، عنوان البريد الإلكتروني، والإحداثيات الجغرافية.",
+          parag43:"بيانات الاتصال والتصفح: عنوان بروتوكول الإنترنت (IP)، معرفات تسجيل الدخول، ملفات تعريف الارتباط (الكوكيز) والمتتبعات الضرورية لتشغيل الموقع وتحسينه.",
+          parag44:"البيانات المرسلة طواعية من قبل المستخدمين في إطار الخدمات عبر الإنترنت: استمارات الشكاوى، طلبات متنوعة، صور، ومستندات ثبوتية.",
+          parag45:"يقتصر جمع البيانات على ما هو ضروري لتحقيق الأغراض الموضحة أدناه.",
+
+          parag5:"تتم معالجة البيانات المجمعة حصريًا للأغراض التالية:",
+          parag51:"	التسجيل واستخدام الخدمات عبر الإنترنت والمنصات الرقمية والتطبيقات",
+          parag52:"إدارة العقود، الفوترة، الاستهلاك، والشكاوى",
+          parag53:"التواصل مع المستخدمين عبر البريد، الهاتف، الرسائل القصيرة (SMS)، البريد الإلكتروني، أو الإشعارات",
+          parag54:"تنظيم حملات إعلامية وتوعوية",
+          parag55:"إجراء التدخلات التقنية والتجارية",
+          parag56:"المتابعة التقنية للتصفح وتحسين تجربة المستخدم",
+          parag57:"تتم جميع عمليات المعالجة من قبل 'سيال' على مستوى القطر الوطني. لا يتم نقل أي بيانات ذات طابع شخصي إلى الخارج أو لطرف ثالث.",
+          parag6:" وفقًا للأحكام القانونية السارية، يتمتع كل شخص معني بالحقوق التالية:",
+          parag61:"الحق في الإعلام.",
+          parag62:"الحق في الوصول.",
+          parag63:"الحق في التصحيح.",
+          parag64:"الحق في المعارضة.",
+          parag65:"الحق في الحذف (بشروط).",
+
+          parag66:"يمكن ممارسة هذه الحقوق عن طريق الاتصال بمندوب حماية البيانات (DPO) عبر البريد الإلكتروني (dpo@seaal.dz)، أو عبر الهاتف (1594)، أو عبر رسالة بريدية موجهة إلى المقر الاجتماعي: 97، حديقة بن عمر، ص.ب 16050، القبة – الجزائر العاصمة.",
+          
+          parag7:"  يتم الاحتفاظ بالبيانات ذات الطابع الشخصي فقط للمدة الضرورية لتحقيق الأغراض التي تم جمعها من أجلها، وفقًا للمتطلبات القانونية والتنظيمية المعمول بها.",
+          parag8:" تطبق 'سيال' جميع التدابير التنظيمية والتقنية المناسبة لضمان سرية، وسلامة، وتوافر البيانات ذات الطابع الشخصي التي تتم معالجتها.",
+          
+          parag9:"تحتفظ 'سيال' بالحق في مراجعة هذه السياسة وفقًا لتطور التشريعات الوطنية في مجال حماية البيانات وأنشطتها. ",
+          parag91:"يشار إلى تاريخ آخر تحديث في مطلع هذه الوثيقة.",
+           
+          footerLieux: "حديقة بن عمر القبة، الجزائر العاصمة",
+          footerDroit: "سيال . جميع الحقوق محفوظة. "
+        }
+      }
+    };
+
+
+    const contentDiv = document.getElementById("content");
+    const langSelect = document.getElementById("langSelect");
+
+    function renderContent(lang) {
+      const t = traductions[lang];
+      document.documentElement.setAttribute("dir", t.dir);
+      document.documentElement.setAttribute("lang", lang);
+      document.querySelector(".nav-title").textContent = t.title;
+
+     document.title = t.title;
+      const s = t.section1;
+      const p = t.section2;
+      const parag221Item = lang !== "ar" ? `<li>${p.parag221}</li>` : "";
+      const parag222Item = lang !== "ar" ? `<li>${p.parag222}</li>` : "";
+      const parag45Item = lang !== "ar" ? `<p>${p.parag45}</p>` : "";
+      const parag65Item = lang !== "ar" ? `<li>${p.parag65}</li>` : "";
+
+      contentDiv.innerHTML = `
+        <div class="parag"><h2>${s.h21}</h2><p>${p.parag1}</p> <p>${p.parag11}</p> <p>${p.parag12}</p> </div>
+        <div class="parag"><h2>${s.h22}</h2><p>${p.parag2}</p><p>${p.parag21}</p>
+         <ul>
+            <li>${p.parag221}</li>
+            <li>${p.parag222} </li>
+          </ul>
+        </div>
+        <div class="parag"><h2>${s.h23}</h2><p>${p.parag3}</p></div>
+        <div class="parag"><h2>${s.h24}</h2><p>${p.parag4}</p>
+          <ul>
+            <li>${p.parag41}</li>
+            <li>${p.parag42}</li>
+            <li>${p.parag43}</li>
+            <li>${p.parag44}</li>
+          </ul>
+          <p>${p.parag45}</p>
+        </div>
+        <div class="parag"><h2>${s.h25}</h2><p>${p.parag5}</p>
+          <ul>
+            <li>${p.parag51}</li>
+            <li>${p.parag52}</li>
+            <li>${p.parag53}</li>
+            <li>${p.parag54}</li>
+            <li>${p.parag55}</li>
+            <li>${p.parag56}</li>
+          </ul>
+          <p>${p.parag57}</p>
+        </div>
+        <div class="parag"><h2>${s.h26}</h2><p>${p.parag6}</p>
+          <ul>
+            <li>${p.parag61}</li>
+            <li>${p.parag62}</li>
+            <li>${p.parag63}</li>
+            <li>${p.parag64}</li>
+            <li>${p.parag65}</li>
+          </ul>
+          <p>${p.parag66}</p>
+        </div>
+        <div class="parag"><h2>${s.h27}</h2><p>${p.parag7}</p></div>
+        <div class="parag"><h2>${s.h28}</h2><p>${p.parag8}</p></div>
+        <div class="parag"><h2>${s.h29}</h2><p>${p.parag9}</p> <p>${p.parag91}</p></div> 
+
+
+
+<footer class="footer">
+  <div class="footer-container">
+    <div class="footer-logo">
+      <img src="logo.png" alt="Logo SEAAL"> 
+    </div>
+
+    <div class="footer-contact"> 
+      <p>📧 
+        <a href="mailto:service.client@seaal.dz">service.client@seaal.dz</a>
+      </p>
+      <p>📍 97, ${p. footerLieux}</p>
+    </div>
+
+    <div class="social-tel">
+      <div class="tel"> 
+          <a href="tel:1594">
+                  <img src="headerCato.png" alt="Téléphone SEAAL">
+          </a>
+      </div>
+      
+    <div class="footer-social">
+      <a href="https://www.facebook.com/SEAALCorporate/?locale=fr_FR" target="_blank" aria-label="Facebook">
+        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/facebook.svg" alt="Facebook">
+      </a>
+      <a href="https://www.instagram.com/seaal_corporate/" target="_blank" aria-label="Instagram">
+        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/instagram.svg" alt="Instagram">
+      </a>
+      <a href="https://www.linkedin.com/company/seaal/posts/?feedView=all" target="_blank" aria-label="LinkedIn">
+        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/linkedin.svg" alt="LinkedIn">
+      </a>
+      <a href="https://x.com/SEAAL_online" target="_blank" aria-label="Twitter">
+        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/x.svg" alt="Twitter/X">
+      </a>
+      <a href="https://www.youtube.com/@SEAALOfficielle" target="_blank" aria-label="Youtube">
+        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/youtube.svg" alt="Youtube">
+      </a>
+    </div>
+
+       
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy;  <span id="year"></span> ${p.footerDroit}</p>
+  </div>
+</footer>
+
+      `;
+      document.getElementById("year").textContent = new Date().getFullYear();
+    }
+
+    langSelect.addEventListener("change", (e) => renderContent(e.target.value));
+
+    renderContent("fr");
+    
+  </script>
+   
+
+</body>
+</html>
